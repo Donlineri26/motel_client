@@ -3,6 +3,7 @@ package com.example.motel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
@@ -35,6 +36,13 @@ public class NomeraActivity extends AppCompatActivity {
                 if (i > 0) {
                     count_people.setText(String.valueOf(i-1));
                 }
+            }
+        });
+        findViewById(R.id.button_home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NomeraActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
